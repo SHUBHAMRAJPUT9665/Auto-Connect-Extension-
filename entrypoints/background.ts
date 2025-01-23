@@ -3,6 +3,7 @@ export default defineBackground(() => {
     console.log("Background script received message:", request);
     
     if (request.action === 'connect') {
+      
         // Query the active tab in the current window
         chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
             if (tabs.length > 0 && tabs[0].id !== undefined) {

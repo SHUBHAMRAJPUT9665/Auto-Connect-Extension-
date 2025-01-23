@@ -1,8 +1,9 @@
 export default defineBackground(() => {
   chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     console.log("Background script received message:", request);
-    
-    if (request.action === 'connect') {
+
+    // optional request action 
+    if (request?.action === 'connect') {
       
         // Query the active tab in the current window
         chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -19,7 +20,7 @@ export default defineBackground(() => {
         return true; // Indicates asynchronous response
     } 
     
-    else if (request.action === 'stop') {
+    else if (request?.action === 'stop') {
         // Query the active tab in the current window
         chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
             if (tabs.length > 0 && tabs[0].id !== undefined) {

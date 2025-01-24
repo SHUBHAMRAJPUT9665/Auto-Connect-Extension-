@@ -5,7 +5,6 @@ import { FaLinkedin } from 'react-icons/fa6';
 
 const App = () => {
   const handleStart = () => {
-    
     window.open('https://www.linkedin.com/mynetwork/grow/', '_blank');
 
     // // Logic to send a message to the content script to start connecting
@@ -15,7 +14,6 @@ const App = () => {
     //   }
     // });
   };
-
   return (
     <div style={{ padding: '20px', textAlign: 'center' }}>
       <FaLinkedin style={{ fontSize: '2rem', color: '#0073b1' }} />

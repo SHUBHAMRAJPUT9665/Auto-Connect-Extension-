@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './popup.css';
 import { FaLinkedin } from 'react-icons/fa6';
 
+
 const App = () => {
   const handleStart = () => {
     window.open('https://www.linkedin.com/mynetwork/grow/', '_blank');
